@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.glass {
+    height: 80vh;
+    width: 60%;
+    background: white;
+    background: linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 20px;
+    /* basically we need the circle behind the glass so we can add a z index 
+    higher the number more in front it will be by deafult z index is 1 
+    so circle have z index 1 and glass has 2 so glass will be in front now. */
+    z-index: 2;
+    /* so this here add that blur affect to the circle area which is behind the 
+    glass */
+    backdrop-filter: blur(2rem);
+}
+
+.circle1, .circle2 {
+    height: 200px;
+    width: 200px;
+    background: white;
+    background: linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.6));
+    position: absolute;
+    border-radius: 100px;
+}
+
+.circle1 {
+    top: 5%;
+    right: 13%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+.avatar {
+    border-radius: 50%;
+}
