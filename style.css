@@ -4,17 +4,25 @@
     box-sizing: border-box;
 }
 
+h2 {
+    color: #426696;
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
 h3 {
     color: #426696;
     opacity: 0.8;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.0rem;
 }
 
-h4, p {
+h4, p, li {
     color: #658ec6;
     opacity: 0.8;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 main {
@@ -39,18 +47,50 @@ main {
     z-index: 2;
     /* so this here add that blur affect to the circle area which is behind the 
     glass */
-    backdrop-filter: blur(2rem);
+    backdrop-filter: blur(1rem);
     display: flex;
 }
 
-.circle1, .circle2 {
-    height: 200px;
-    width: 200px;
+.circle1 {
+    height: 180px;
+    width: 180px;
     background: white;
     background: linear-gradient(to right bottom, 
         rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.6));
     position: absolute;
-    border-radius: 100px;
+    border-radius: 90px;
+}
+
+.circle2 {
+    height: 100px;
+    width: 100px;
+    background: white;
+    background: linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.6));
+    position: absolute;
+    border-radius: 50px;
+}
+
+.circle3 {
+    height: 100px;
+    width: 100px;
+    background: white;
+    background: linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    position: absolute;
+    border-radius: 50px;
+    backdrop-filter: blur(1rem);
+    z-index: 3;
+}
+
+.circle4, .circle5 {
+    height: 60px;
+    width: 60px;
+    background: white;
+    background: linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    position: absolute;
+    border-radius: 30px;
 }
 
 .circle1 {
@@ -59,8 +99,23 @@ main {
 }
 
 .circle2 {
-    bottom: 5%;
-    left: 10%;
+    bottom: 2%;
+    left: 45%;
+}
+
+.circle3 {
+    bottom: 20%;
+    right: 15%;
+}
+
+.circle4 {
+    bottom: 15%;
+    right: 5%;
+}
+
+.circle5 {
+    bottom: 40%;
+    right: 10%;
 }
 
 .avatar {
@@ -75,20 +130,20 @@ img {
 }
 
 .dashboard {
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
     background: linear-gradient(to right bottom, 
-        rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
     border-radius: 20px;
 }
 
 .link {
     display: flex;
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     align-items: center;
 }
 
@@ -115,6 +170,45 @@ img {
     font-weight: 600;
 }
 
-.projects {
-    flex: 2;
+
+.status {
+    margin-bottom: 1rem;
 }
+
+.status input {
+    background: linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border: none;
+    width: 50%;
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+} 
+
+.projects img {
+    height: 60px;
+    width: 60px;
+}
+
+.projects {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    margin: 1rem 3rem;
+}
+
+.card {
+    background: linear-gradient(to left top, 
+        rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* pop effect */
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    justify-content: space-between;
+}
+
+.card ul {
+    margin: 0rem 1rem;
+}
+
